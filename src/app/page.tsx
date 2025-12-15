@@ -1,19 +1,34 @@
 export default function Home() {
   return (
-    <div className="p-10">
-      <h1 className="text-6xl font-bold text-purple-500 mb-8">RKPulse Live Streaming 🎵</h1>
-      <p className="text-2xl text-gray-300 mb-12">Your cross-platform music & video app is now live!</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-          <div key={i} className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 cursor-pointer transition">
-            <div className="w-full h-64 bg-gray-700 rounded-lg mb-4 flex items-center justify-center text-4xl text-red-500">
-              LIVE {i}
-            </div>
-            <p className="text-xl font-bold">Live Stream {i}</p>
-            <p className="text-gray-400">100+ viewers watching</p>
-          </div>
-        ))}
+    <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6">
+      <h1 className="text-4xl md:text-6xl font-bold text-center">
+        Welcome to <span className="text-purple-500">RKPulse</span>
+      </h1>
+
+      <p className="text-lg md:text-xl text-gray-300 mt-4 text-center max-w-2xl">
+        Bangladesh’s first artist-led global music & live streaming platform.
+        Built from scratch by Rubel Khandokar.
+      </p>
+
+      <div className="mt-8 flex gap-4">
+        <a
+          href="#"
+          className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg text-lg font-semibold"
+        >
+          Start Listening
+        </a>
+
+        <a
+          href="#"
+          className="border border-gray-500 hover:border-white px-6 py-3 rounded-lg text-lg font-semibold"
+        >
+          Creator Login
+        </a>
       </div>
-    </div>
+
+      <footer className="mt-16 text-gray-500 text-sm">
+        © {new Date().getFullYear()} RKPulse — Built by Rubel Khandokar
+      </footer>
+    </main>
   );
 }
